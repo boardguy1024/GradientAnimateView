@@ -21,16 +21,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qdD-zd-QUH" customClass="UIViewEx" customModule="GradientAnimateView" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdD-zd-QUH" customClass="UIViewEx" customModule="GradientAnimateView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                        <color key="value" red="0.285888671875" green="0.53216138767777776" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="value" red="1" green="0.30196078430000001" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                        <color key="value" red="1" green="0.80234014818055555" blue="0.1667019444" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="value" red="0.73082139759999998" green="0.30196078430000001" blue="0.8582462086" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalGradient" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -40,11 +39,20 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qdD-zd-QUH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0ki-hL-EBI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qdD-zd-QUH" secondAttribute="bottom" id="5dI-6f-W1G"/>
+                            <constraint firstAttribute="trailing" secondItem="qdD-zd-QUH" secondAttribute="trailing" id="C8q-2t-5dO"/>
+                            <constraint firstItem="qdD-zd-QUH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Pyz-3N-dFa"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gradientView" destination="qdD-zd-QUH" id="Mj6-LW-ktE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.5" y="138.5"/>
+            <point key="canvasLocation" x="135.19999999999999" y="138.0809595202399"/>
         </scene>
     </scenes>
 </document>
