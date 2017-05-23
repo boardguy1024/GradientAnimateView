@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var gradientView: UIViewEx!
     var colorArray: [(color1: UIColor, color2: UIColor)] = []
     
@@ -27,9 +28,17 @@ class ViewController: UIViewController {
         colorArray.append((color1:#colorLiteral(red: 0.4525182843, green: 0.4140599966, blue: 0.9525302052, alpha: 1) ,color2: #colorLiteral(red: 0.92664814, green: 0.3664760292, blue: 0.9478432536, alpha: 1)))
         colorArray.append((color1:#colorLiteral(red: 0.92664814, green: 0.3664760292, blue: 0.9478432536, alpha: 1) ,color2: #colorLiteral(red: 1, green: 0.177952081, blue: 0.566079855, alpha: 1)))
         
+        setRoundImage(imageView: profileImage)
         animateBackgroundColor()
     }
 
+    func setRoundImage(imageView: UIImageView) {
+        imageView.layer.cornerRadius = imageView.frame.width / 2
+        imageView.layer.masksToBounds = true
+        imageView.layer.borderColor = UIColor.white.cgColor
+        imageView.layer.borderWidth = 2
+    }
+    
     func animateBackgroundColor() {
         
         print("colorArray count is : \(colorArray.count)")
